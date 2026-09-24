@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy AIGC 简历</title>
+    <style id="theme-vars">
+:root {
+  /* Brand hue: indigo-cyan tech */
+  --brand-primary: #3b82f6;
+  --brand-primary-600: #2563eb;
+  --brand-primary-700: #1d4ed8;
+  --brand-cyan: #06b6d4;
+
+  /* Surfaces */
+  --brand-background: #0b0b0f;
+  --brand-surface: #14141a;
+  --brand-surface-2: #1e1e26;
+
+  /* Text */
+  --brand-foreground: #f5f5f7;
+  --brand-foreground-muted: #a1a1aa;
+  --brand-foreground-subtle: #71717a;
+
+  /* Semantic aliases */
+  --brand-card: #14141a;
+  --brand-card-foreground: #f5f5f7;
+  --brand-primary: #3b82f6;
+  --brand-primary-foreground: #ffffff;
+  --brand-muted: #27272a;
+  --brand-muted-foreground: #a1a1aa;
+  --brand-border: rgba(255, 255, 255, 0.08);
+  --brand-input: #1e1e26;
+  --brand-ring: #3b82f6;
+
+  /* Radius */
+  --brand-radius-sm: 4px;
+  --brand-radius-md: 8px;
+  --brand-radius-lg: 16px;
+
+  /* Typography */
+  --brand-font: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --brand-font-display: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+
+  /* Shadows */
+  --brand-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --brand-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.light {
+  --brand-background: #f8f9fb;
+  --brand-surface: #ffffff;
+  --brand-surface-2: #f1f5f9;
+  --brand-foreground: #0f172a;
+  --brand-foreground-muted: #475569;
+  --brand-foreground-subtle: #94a3b8;
+  --brand-card: #ffffff;
+  --brand-card-foreground: #0f172a;
+  --brand-muted: #f1f5f9;
+  --brand-muted-foreground: #475569;
+  --brand-border: rgba(15, 23, 42, 0.08);
+  --brand-input: #f1f5f9;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--brand-background);
+    --color-foreground: var(--brand-foreground);
+    --color-card: var(--brand-card);
+    --color-card-foreground: var(--brand-card-foreground);
+    --color-primary: var(--brand-primary);
+    --color-primary-foreground: var(--brand-primary-foreground);
+    --color-muted: var(--brand-muted);
+    --color-muted-foreground: var(--brand-muted-foreground);
+    --color-border: var(--brand-border);
+    --color-input: var(--brand-input);
+    --color-ring: var(--brand-ring);
+    --radius-sm: var(--brand-radius-sm);
+    --radius-md: var(--brand-radius-md);
+    --radius-lg: var(--brand-radius-lg);
+  }
+  @layer base {
+    body { background: var(--brand-background); color: var(--brand-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--brand-background); }
+      .text-background { color: var(--brand-background); }
+      .border-background { border-color: var(--brand-background); }
+      .ring-background { --tw-ring-color: var(--brand-background); }
+      .bg-foreground { background-color: var(--brand-foreground); }
+      .text-foreground { color: var(--brand-foreground); }
+      .border-foreground { border-color: var(--brand-foreground); }
+      .ring-foreground { --tw-ring-color: var(--brand-foreground); }
+      .bg-card { background-color: var(--brand-card); }
+      .text-card { color: var(--brand-card); }
+      .border-card { border-color: var(--brand-card); }
+      .ring-card { --tw-ring-color: var(--brand-card); }
+      .bg-card-foreground { background-color: var(--brand-card-foreground); }
+      .text-card-foreground { color: var(--brand-card-foreground); }
+      .border-card-foreground { border-color: var(--brand-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--brand-card-foreground); }
+      .bg-primary { background-color: var(--brand-primary); }
+      .text-primary { color: var(--brand-primary); }
+      .border-primary { border-color: var(--brand-primary); }
+      .ring-primary { --tw-ring-color: var(--brand-primary); }
+      .bg-primary-foreground { background-color: var(--brand-primary-foreground); }
+      .text-primary-foreground { color: var(--brand-primary-foreground); }
+      .border-primary-foreground { border-color: var(--brand-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--brand-primary-foreground); }
+      .bg-muted { background-color: var(--brand-muted); }
+      .text-muted { color: var(--brand-muted); }
+      .border-muted { border-color: var(--brand-muted); }
+      .ring-muted { --tw-ring-color: var(--brand-muted); }
+      .bg-muted-foreground { background-color: var(--brand-muted-foreground); }
+      .text-muted-foreground { color: var(--brand-muted-foreground); }
+      .border-muted-foreground { border-color: var(--brand-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--brand-muted-foreground); }
+      .bg-border { background-color: var(--brand-border); }
+      .text-border { color: var(--brand-border); }
+      .border-border { border-color: var(--brand-border); }
+      .ring-border { --tw-ring-color: var(--brand-border); }
+      .bg-input { background-color: var(--brand-input); }
+      .text-input { color: var(--brand-input); }
+      .border-input { border-color: var(--brand-input); }
+      .ring-input { --tw-ring-color: var(--brand-input); }
+      .bg-ring { background-color: var(--brand-ring); }
+      .text-ring { color: var(--brand-ring); }
+      .border-ring { border-color: var(--brand-ring); }
+      .ring-ring { --tw-ring-color: var(--brand-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="bg-background text-foreground">
+      <!-- Hero -->
+      <section id="hero" class="relative overflow-hidden border-b border-border">
+        <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+        <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div class="mx-auto flex max-w-3xl flex-col items-center text-center">
+            <div id="hero-avatar-viewer" data-dom-id="hero-avatar-viewer" class="avatar-viewer relative aspect-square w-full max-w-sm cursor-grab select-none overflow-hidden rounded-2xl border border-border bg-card p-2 active:cursor-grabbing">
+              <div class="absolute inset-0 rounded-2xl card-glow opacity-40 blur-2xl"></div>
+              <div class="avatar-frames relative h-full w-full rounded-xl bg-[var(--brand-surface-2)]">
+                <img src="./assets/avatar-01.jpg" alt="3D 形象 正面" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-100" data-frame="0" />
+                <img src="./assets/avatar-02.jpg" alt="3D 形象 右前 45°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="1" />
+                <img src="./assets/avatar-03.jpg" alt="3D 形象 右侧 90°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="2" />
+                <img src="./assets/avatar-04.jpg" alt="3D 形象 右后 135°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="3" />
+                <img src="./assets/avatar-05.jpg" alt="3D 形象 背面" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="4" />
+                <img src="./assets/avatar-06.jpg" alt="3D 形象 左后 225°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="5" />
+                <img src="./assets/avatar-07.jpg" alt="3D 形象 左侧 270°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="6" />
+                <img src="./assets/avatar-08.jpg" alt="3D 形象 左前 315°" class="avatar-frame absolute inset-0 h-full w-full object-cover opacity-0" data-frame="7" />
+              </div>
+              <div class="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs text-muted-foreground backdrop-blur">
+                <span class="inline-flex items-center gap-1.5"><i data-lucide="move-horizontal" class="h-3 w-3"></i>拖动旋转 360°</span>
+              </div>
+            </div>
+            <div class="reveal mt-8">
+              <h1 class="mb-3 text-4xl font-bold tracking-tight md:text-5xl">Sandy <span class="text-muted-foreground">/</span> 顾</h1>
+              <p class="text-base leading-relaxed text-muted-foreground md:text-lg">AIGC 内容创作 · AI 绘画 / AI 视频 / AI 文案</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Intro -->
+      <section id="intro" class="border-b border-border">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div id="intro-card" class="reveal intro-card relative rounded-2xl border border-border bg-card p-6 md:p-10">
+            <div class="intro-card-spotlight pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300"></div>
+            <div class="relative">
+              <p class="mb-4 text-sm font-medium uppercase tracking-widest text-primary">个人简介</p>
+              <p class="text-base leading-relaxed text-muted-foreground md:text-lg">男 ｜ 27 岁 ｜ 6 年工作经验 ｜ 求职意向：AIGC 内容创作相关岗位（AI 绘画 / AI 视频 / AI 文案方向）。写了 6 年健康知识赛道内容、影响了上千个用户，一直在做同一件事：把专业的东西讲明白。AIGC 对我来说不是换赛道，是给这条内容主线换工具。目前正在自学 AI 生成工具并持续产出作品，能沉下心调提示词，也会从数据和反馈里改内容。</p>
+              <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--brand-surface-2)] px-3 py-1.5 text-muted-foreground"><i data-lucide="phone" class="h-3.5 w-3.5 text-primary"></i>17721090306</span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--brand-surface-2)] px-3 py-1.5 text-muted-foreground"><i data-lucide="mail" class="h-3.5 w-3.5 text-primary"></i>328577975@qq.com</span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--brand-surface-2)] px-3 py-1.5 text-muted-foreground"><i data-lucide="map-pin" class="h-3.5 w-3.5 text-primary"></i>上海</span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--brand-surface-2)] px-3 py-1.5 text-muted-foreground"><i data-lucide="briefcase" class="h-3.5 w-3.5 text-primary"></i>7-10K</span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--brand-surface-2)] px-3 py-1.5 text-primary">可立即到岗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo & Experience -->
+      <section id="photo-experience" class="border-b border-border">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div class="grid gap-8 md:grid-cols-2 md:items-start">
+            <div class="reveal">
+              <div class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-card p-2">
+                <div class="absolute inset-0 rounded-2xl card-glow opacity-30 blur-2xl"></div>
+                <img src="./assets/avatar-01.jpg" alt="Sandy 3D 形象" class="relative h-full w-full rounded-xl object-cover" />
+              </div>
+            </div>
+            <div class="reveal">
+              <p class="mb-3 text-sm font-medium uppercase tracking-widest text-primary">经历速览</p>
+              <h2 class="mb-6 text-3xl font-bold tracking-tight md:text-4xl">6 年一线内容创作</h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="pen-tool" class="h-5 w-5 text-primary"></i></div>
+                  <div>
+                    <h3 class="font-semibold">科普内容创作者</h3>
+                    <p class="text-sm leading-relaxed text-muted-foreground">科普图文、课程课件、视频脚本都做过，从选题、撰写到发布、互动的全流程自己跑过，知道内容怎么才能让人看得进去、看得懂。</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="cpu" class="h-5 w-5 text-primary"></i></div>
+                  <div>
+                    <h3 class="font-semibold">AIGC 自学者</h3>
+                    <p class="text-sm leading-relaxed text-muted-foreground">已掌握图片生成工具 image 2、seedream、nanobanana 与 AI 视频工具即梦 seedance、kling 的使用与提示词调优，有独立作品，能把内容创作经验直接迁移到用 AI 工具做内容上。</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="file-text" class="h-5 w-5 text-primary"></i></div>
+                  <div>
+                    <h3 class="font-semibold">小红书账号运营</h3>
+                    <p class="text-sm leading-relaxed text-muted-foreground">独立运营健康科普小红书账号（知食分子 sandy）：完成选题、内容撰写、发布与用户互动流程，从数据反馈中迭代选题方向。</p>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.xiaohongshu.com/user/profile/632ed873000000002303e799" target="_blank" rel="noopener noreferrer" data-dom-id="cta-xiaohongshu" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-600)]">小红书主页<i data-lucide="external-link" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="border-b border-border">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div class="mb-8 reveal">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">Resume</p>
+            <h2 class="text-3xl font-bold tracking-tight md:text-4xl">工作经历</h2>
+          </div>
+          <div class="space-y-6">
+            <div class="reveal rounded-xl border border-border bg-card p-6 md:p-8">
+              <div class="mb-4 flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">浙江诺特健康科技股份有限公司</h3>
+                  <p class="text-sm text-muted-foreground">营养师 / 健康管理师</p>
+                </div>
+                <span class="text-sm font-medium text-primary">2025.12 - 2026.07</span>
+              </div>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li class="flex gap-2"><span class="text-primary">·</span>面向肥胖、慢病人群做健康科普内容输出：把慢病饮食禁忌、科学减重原理讲成患者听得懂的话，积累了专业内容大众化的创作经验。</li>
+                <li class="flex gap-2"><span class="text-primary">·</span>解答患者日常饮食、身体养护疑问，根据对方的理解水平调整表达方式，练出了面向不同人群的表达能力。</li>
+                <li class="flex gap-2"><span class="text-primary">·</span>规范建立患者健康档案，记录与整理大量信息，保证内容准确、可追溯。</li>
+              </ul>
+            </div>
+            <div class="reveal rounded-xl border border-border bg-card p-6 md:p-8">
+              <div class="mb-4 flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">上海巅峰健康科技股份有限公司</h3>
+                  <p class="text-sm text-muted-foreground">营养师 / 健康管理师</p>
+                </div>
+                <span class="text-sm font-medium text-primary">2020.07 - 2025.10</span>
+              </div>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li class="flex gap-2"><span class="text-primary">·</span>把运动生理学、营养学等专业内容转化为线下课程与线上科普内容，累计产出课程、图文、短视频等多种形态内容。</li>
+                <li class="flex gap-2"><span class="text-primary">·</span>独立运营健康科普小红书账号（知食分子 sandy）：完成选题、内容撰写、发布与用户互动流程，从数据反馈中迭代选题方向。</li>
+                <li class="flex gap-2"><span class="text-primary">·</span>独立完成客户的训练规划与效果复盘，牵头内外部培训体系搭建，制作培训课件，熟悉内容的结构化表达。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-10 mb-8 reveal">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">Education</p>
+            <h2 class="text-3xl font-bold tracking-tight md:text-4xl">教育背景</h2>
+          </div>
+          <div class="reveal flex items-start gap-4 rounded-xl border border-border bg-card p-6 md:p-8">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10"><i data-lucide="graduation-cap" class="h-6 w-6 text-primary"></i></div>
+            <div>
+              <h3 class="text-lg font-semibold">上海体育大学</h3>
+              <p class="text-sm text-muted-foreground">本科 · 运动人体科学</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Competition Awards -->
+      <section id="awards" class="border-b border-border">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div class="mb-8 reveal">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">Awards</p>
+            <h2 class="text-3xl font-bold tracking-tight md:text-4xl">竞赛奖项</h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="reveal flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="award" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <h3 class="font-semibold">CBBA 国家级健身教练</h3>
+                <p class="text-sm text-muted-foreground">中国健美协会认证</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="trophy" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <h3 class="font-semibold">健身模特 第一名</h3>
+                <p class="text-sm text-muted-foreground">2019 年上海市大学生健身健美锦标赛</p>
+              </div>
+            </div>
+            <div class="reveal flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="trophy" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <h3 class="font-semibold">第一名</h3>
+                <p class="text-sm text-muted-foreground">2022 年魔兽健身杯撸铁虎城市健身健美精英赛</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+        <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div class="mb-8 reveal">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">Contact</p>
+            <h2 class="text-3xl font-bold tracking-tight md:text-4xl">联系方式</h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <a href="tel:17721090306" class="reveal flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/30">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="phone" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <p class="text-xs text-muted-foreground">电话</p>
+                <p class="font-medium">17721090306</p>
+              </div>
+            </a>
+            <a href="mailto:328577975@qq.com" class="reveal flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/30">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="mail" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <p class="text-xs text-muted-foreground">邮箱</p>
+                <p class="font-medium">328577975@qq.com</p>
+              </div>
+            </a>
+            <div class="reveal flex items-center gap-4 rounded-xl border border-border bg-card p-5">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="map-pin" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <p class="text-xs text-muted-foreground">期望城市</p>
+                <p class="font-medium">上海</p>
+              </div>
+            </div>
+            <a href="https://www.xiaohongshu.com/user/profile/632ed873000000002303e799" target="_blank" rel="noopener noreferrer" data-dom-id="cta-xiaohongshu" class="reveal flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/30">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"><i data-lucide="external-link" class="h-5 w-5 text-primary"></i></div>
+              <div>
+                <p class="text-xs text-muted-foreground">小红书</p>
+                <p class="font-medium">知食分子 sandy</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-border bg-background py-8">
+        <div class="mx-auto max-w-6xl px-4 text-center text-sm text-muted-foreground">
+          <p>© 2026 Sandy / 顾 · AIGC 内容创作者</p>
+        </div>
+      </footer>
+
+      <script>
+        (function () {
+          // Smooth scroll for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+              var targetId = this.getAttribute('href');
+              var target = document.querySelector(targetId);
+              if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+          });
+
+          // Scroll reveal
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+          document.querySelectorAll('.reveal').forEach(function (el) {
+            observer.observe(el);
+          });
+
+          // Intro card gravity spotlight
+          var introCard = document.getElementById('intro-card');
+          if (introCard) {
+            introCard.addEventListener('mousemove', function (e) {
+              var rect = introCard.getBoundingClientRect();
+              var x = ((e.clientX - rect.left) / rect.width) * 100;
+              var y = ((e.clientY - rect.top) / rect.height) * 100;
+              introCard.style.setProperty('--mouse-x', x + '%');
+              introCard.style.setProperty('--mouse-y', y + '%');
+            });
+          }
+
+          // Avatar 360 drag rotation
+          var avatarViewer = document.getElementById('hero-avatar-viewer');
+          if (avatarViewer) {
+            var frames = avatarViewer.querySelectorAll('.avatar-frame');
+            var totalFrames = frames.length;
+            var currentFrame = 0;
+            var isDragging = false;
+            var startX = 0;
+            var lastX = 0;
+            var accumulatedDelta = 0;
+            var dragThreshold = 30;
+
+            function showFrame(index) {
+              var frame = ((index % totalFrames) + totalFrames) % totalFrames;
+              frames.forEach(function (img, i) {
+                img.classList.toggle('opacity-100', i === frame);
+                img.classList.toggle('opacity-0', i !== frame);
+              });
+              currentFrame = frame;
+            }
+
+            function handleStart(x) {
+              isDragging = true;
+              startX = x;
+              lastX = x;
+              accumulatedDelta = 0;
+              avatarViewer.classList.add('cursor-grabbing');
+            }
+
+            function handleMove(x) {
+              if (!isDragging) return;
+              var delta = x - lastX;
+              lastX = x;
+              accumulatedDelta += delta;
+              if (Math.abs(accumulatedDelta) >= dragThreshold) {
+                var direction = accumulatedDelta > 0 ? 1 : -1;
+                showFrame(currentFrame + direction);
+                accumulatedDelta = 0;
+              }
+            }
+
+            function handleEnd() {
+              isDragging = false;
+              avatarViewer.classList.remove('cursor-grabbing');
+            }
+
+            avatarViewer.addEventListener('mousedown', function (e) {
+              e.preventDefault();
+              handleStart(e.clientX);
+            });
+            window.addEventListener('mousemove', function (e) {
+              handleMove(e.clientX);
+            });
+            window.addEventListener('mouseup', handleEnd);
+
+            avatarViewer.addEventListener('touchstart', function (e) {
+              handleStart(e.touches[0].clientX);
+            }, { passive: true });
+            avatarViewer.addEventListener('touchmove', function (e) {
+              handleMove(e.touches[0].clientX);
+            }, { passive: true });
+            avatarViewer.addEventListener('touchend', handleEnd);
+
+            // Auto-rotate slowly when idle
+            var autoRotate = setInterval(function () {
+              if (!isDragging) showFrame(currentFrame + 1);
+            }, 2500);
+            avatarViewer.addEventListener('mousedown', function () {
+              clearInterval(autoRotate);
+            });
+            avatarViewer.addEventListener('touchstart', function () {
+              clearInterval(autoRotate);
+            }, { passive: true });
+          }
+        })();
+      </script>
+      <style>
+        html { scroll-behavior: smooth; }
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+        .hero-gradient { background: linear-gradient(to bottom right, color-mix(in srgb, var(--brand-primary) 5%, transparent), transparent, color-mix(in srgb, var(--brand-cyan) 5%, transparent)); }
+        .card-glow { background: linear-gradient(to bottom right, color-mix(in srgb, var(--brand-primary) 20%, transparent), color-mix(in srgb, var(--brand-cyan) 20%, transparent)); }
+
+        /* Intro card gravity feedback */
+        .intro-card {
+          transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+          transform-style: preserve-3d;
+        }
+        .intro-card:hover {
+          transform: translateY(6px) scale(0.995);
+          box-shadow: 0 12px 40px color-mix(in srgb, var(--brand-primary) 15%, transparent), 0 0 0 1px color-mix(in srgb, var(--brand-primary) 35%, transparent);
+          border-color: color-mix(in srgb, var(--brand-primary) 45%, transparent);
+        }
+        .intro-card-spotlight {
+          background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), color-mix(in srgb, var(--brand-primary) 15%, transparent), transparent 60%);
+        }
+        .intro-card:hover .intro-card-spotlight { opacity: 1; }
+
+        /* Avatar 360 viewer */
+        .avatar-frame { transition: opacity 0.08s linear; }
+        .avatar-viewer { touch-action: pan-y; }
+      </style>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
