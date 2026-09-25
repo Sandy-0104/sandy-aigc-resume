@@ -626,7 +626,7 @@
           100% { transform: translate(0, 0); }
         }
 
-        /* ====== sen-3d-resume 风格：滚动渐暗蒙层 ====== */
+        /* ====== sen-3d-resume 风格：滚动渐暗蒙层（桌面：右侧偏暗，保证履历文字可读） ====== */
         .scrim {
           position: fixed; inset: 0; z-index: 1; pointer-events: none;
           opacity: 0;
@@ -639,7 +639,7 @@
           transition: opacity 0.1s linear;
         }
 
-        /* ====== sen-3d-resume 风格：固定磨砂右轨 ====== */
+        /* ====== sen-3d-resume 风格：固定磨砂右轨（仅桌面端） ====== */
         .glass-rail {
           position: fixed; top: -2px; right: -2px; bottom: -2px;
           width: min(680px, 52vw); z-index: 3; pointer-events: none;
@@ -650,6 +650,18 @@
           mask: linear-gradient(to right, transparent 0%, #000 46%);
           opacity: 0;
           transition: opacity 0.3s ease-out;
+        }
+
+        /* ====== 移动端修复：禁用右侧磨砂轨，渐暗层改为均匀覆盖 ====== */
+        @media (max-width: 768px) {
+          .glass-rail { display: none; }
+          .scrim {
+            background: var(--brand-background);
+            opacity: 0 !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .scrim { opacity: var(--scrim-opacity, 0) !important; }
         }
 
         /* ====== sen-3d-resume 风格：首屏装饰画框 + 四角标 + 元数据 ====== */
